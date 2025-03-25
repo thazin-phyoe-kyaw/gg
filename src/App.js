@@ -52,15 +52,21 @@ const MetadataPage = () => {
     <>
       <Helmet>
         <title>{metadata.title}</title>
+        <meta property="og:title" content={metadata.title} />
+        <meta property="og:description" content={metadata.description} />
+        <meta property="og:image" content={metadata.imageUrl} />
+        {/* <meta property="og:url" content="https://yourwebsite.com" /> */}
+        <meta property="og:type" content="website" />
+        {/* <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
         <meta property="og:title" content={metadata.title} />
         <meta property="og:description" content={metadata.description} />
-        <meta property="og:image" content={metadata.image} />
+        <meta property="og:image" content={metadata.image} /> */}
       </Helmet>
       <div>
         <h1>{metadata.title}</h1>
         <p>{metadata.description}</p>
-        <img src={metadata.image} alt={metadata.title} />
+        <img src={metadata.imageUrl} alt={metadata.title} />
       </div>
     </>
   );
