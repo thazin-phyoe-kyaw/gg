@@ -16,7 +16,13 @@ const MetadataPage = () => {
         //   throw new Error('Network response was not ok');
         // }
       
-        const data = await response.json();
+        // const data = await response.json();
+        const data  ={
+          title: 'Telegaram Image Preview',
+          description: 'Click here to view more infos',
+          imageUrl:
+            'https://png.pngtree.com/png-clipart/20220620/ourmid/pngtree-pink-cute-cat-icon-animal-png-yuri-png-image_5230763.png',
+        };
         console.log(data)
         setMetadata({
           title: data.title,
